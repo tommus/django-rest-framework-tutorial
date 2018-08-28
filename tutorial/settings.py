@@ -26,6 +26,8 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
 
+    "django_extensions",
+
     # endregion
 
     # region REST
@@ -37,6 +39,7 @@ INSTALLED_APPS = [
 
 INSTALLED_APPS += [
     "tutorial.quickstart",
+    "tutorial.snippets",
 ]
 
 # endregion

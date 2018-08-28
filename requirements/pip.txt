@@ -10,3 +10,9 @@ django
 djangorestframework
 
 # endregion
+
+# region Snippets
+
+pygments
+
+# endregion

@@ -1,28 +1,24 @@
-from django.contrib.auth.models import User, Group
-from rest_framework import viewsets
+from django.contrib.auth.models import User
+from rest_framework import generics
 
-from tutorial.quickstart.serializers import UserSerializer, GroupSerializer
+from tutorial.quickstart.serializers import UserSerializer
 
 
 # region User
 
-class UserViewSet(viewsets.ModelViewSet):
+class UserList(generics.ListAPIView):
     """
-    API endpoint that allows users be be viewed and edited.
+    API endpoint that allows users to be viewed.
     """
-    queryset = User.objects.all().order_by("-date_joined")
+    queryset = User.objects.all()
     serializer_class = UserSerializer
 
 
-# endregion
-
-# region Group
-
-class GroupViewSet(viewsets.ModelViewSet):
+class UserDetails(generics.RetrieveAPIView):
     """
-    API endpoint that allows groups to be viewed and edited.
+    API endpoint that allows user to be viewed.
     """
-    queryset = Group.objects.all()
-    serializer_class = GroupSerializer
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
 
 # endregion

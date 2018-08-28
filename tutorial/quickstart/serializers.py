@@ -1,22 +1,16 @@
-from django.contrib.auth.models import User, Group
+from django.contrib.auth.models import User
 from rest_framework import serializers
+
+from tutorial.snippets.models import Snippet
 
 
 # region User
 
-class UserSerializer(serializers.HyperlinkedModelSerializer):
+class UserSerializer(serializers.ModelSerializer):
+    snippets = serializers.PrimaryKeyRelatedField(many=True, queryset=Snippet.objects.all())
+
     class Meta:
         model = User
-        fields = ("url", "username", "email", "groups")
-
-
-# endregion
-
-# region Group
-
-class GroupSerializer(serializers.HyperlinkedModelSerializer):
-    class Meta:
-        model = Group
-        fields = ("url", "name")
+        fields = ("id", "username", "snippets")
 
 # endregion

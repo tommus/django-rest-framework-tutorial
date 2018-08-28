@@ -1,0 +1,12 @@
+# region Base packages
+
+pip==18.*
+
+# endregion
+
+# region Django
+
+django
+djangorestframework
+
+# endregion

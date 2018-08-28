@@ -1,0 +1,18 @@
+# IDE.
+.idea/
+tmp/
+!tmp/.keep
+
+# Python cache.
+*.py[oc]
+__pycache__/
+
+# Python virtual environment.
+.venv/
+venv/
+
+# Database.
+db.sqlite3
+
+# I18N % L10N.
+*.mo

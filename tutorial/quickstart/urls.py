@@ -13,7 +13,7 @@ app_name = "quickstart"
 
 urlpatterns = [
     path("", views.UserList.as_view(), name="user_list"),
-    path("u<int:pk>/", views.UserDetails.as_view(), name="user_details")
+    path("<int:pk>/", views.UserDetails.as_view(), name="user_details")
 ]
 
 urlpatterns += format_suffix_patterns(urlpatterns)

@@ -40,7 +40,7 @@ Tutorial walk-through.
 
 Example credentials for superuser:
 
-| Field    | Value      |
+| Login    | Password      |
 | -------- | ---------- |
-| login    | admin      |
-| password | quickstart |
+| admin    | quickstart |
+| user     | quickstart |
